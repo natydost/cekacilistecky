@@ -7,7 +7,7 @@ let client = new Paho.MQTT.Client(
 client = new Paho.MQTT.Client("d57a0d1c39d54550b147b58411d86743.s2.eu.hivemq.cloud", 8884, 'letni-skola' + Math.random())
 
 client.onConnectionLost = onConnectionLost;
- client.onMessageArrived = onMessageArrived;
+client.onMessageArrived = onMessageArrived;
 
 client.connect({
     onSuccess: onConnect,
@@ -31,11 +31,18 @@ function onMessageArrived(message) {
     try {
         console.log("onMessageArrived:" + message.destinationName);
         console.log("onMessageArrived:" + message.payloadString);
-        if( message.payloadString=="A"){
-            document.getElementById('sipka').src="arrow-left.svg";
+        if (message.payloadString == "A") {
+            document.getElementById('sipka').src = "arrow-left.svg";
+
+        } else if (message.payloadString == "B") {
+            document.getElementById('sipka').src = "arrow-down.svg";
+
+        } else if (message.payloadString == "C") {
+            document.getElementById('sipka').src = "arrow-right.svg";
         }
+
         objevuje();
-        
+
     } catch (error) {
         console.error(error);
     }
