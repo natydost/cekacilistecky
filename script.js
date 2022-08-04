@@ -31,6 +31,9 @@ function onMessageArrived(message) {
     try {
         console.log("onMessageArrived:" + message.destinationName);
         console.log("onMessageArrived:" + message.payloadString);
+        if( message.payloadString=="A"){
+            document.getElementById('sipka').src="arrow-left.svg";
+        }
         objevuje();
         
     } catch (error) {
