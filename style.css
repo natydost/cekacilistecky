@@ -1,12 +1,27 @@
-*{
-    background-color: rgb(51, 121, 226);
+* {
+    background-color: #0099CC;
 }
-body{
+
+body {
     text-align: center;
 }
-#number{
+
+#number {
     font-size: 75px;
 }
-h1{
+
+h1 {
     font-family: 'Playfair Display', serif;
-} 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#sipka {
+
+    height: 150px;
+    width: 150px;
+
+}
