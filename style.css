@@ -1,5 +1,5 @@
 *{
-    background-color: blue;
+    background-color: rgb(51, 121, 226);
 }
 body{
     text-align: center;
@@ -7,4 +7,6 @@ body{
 #number{
     font-size: 75px;
 }
- 
+h1{
+    font-family: 'Playfair Display', serif;
+} 
